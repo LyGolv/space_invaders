@@ -1,0 +1,137 @@
+valgrind --tool=memcheck --leak-check=full --leak-resolution=high --show-reachable=yes --log-file="marche" ./bin/prog
+
+💥 : after bullets touch enemy
+✴ : etoile pour le ciel
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Je n'ai pas pu afficher plusieurs tir en simultané donc :
+* tu dois ecrire un code pour tester ta fonction sur les listes chainées
+* ecrire une fonction d'affichage multiple + déplacement (PAS ALEATOIRE)
+
+* Après cela revoit ton code du jeu et corrige le
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// (corrigé)
+
+La prochaine étape après le tir est l'affichage des bodures, score, mode, vies , etc.
+* vérifie que le vaisseau ne dépasse pas les bords (ni ne les éffaces)
+* vérifie que l'affichage s'adapte au redimensionnement
+
+La prochaine sera la simulation de l'espace avec des étoiles se déplaçant vers le bas (avec une vitesse fixe + le deplacement vers le haut du vaisseau du joueur.
+
+
+--> But du jeu:
+
+>> Le jeu aura 3 modes :
+	- Facile
+	- Difficile
+	- Progressif
+	- Gladiateur
+
+Au Lacement : 
+	- Petite animation, puis affichage du menu
+	
+Sur le menu de selection :
+	- L'utilisateur pour choisir entre les 3 modes définit, 
+	- le choix se fera par appuie sur les touches de directions et non pas par "saisi"
+	- une fois le choix du mode effectué, le jeu sera redirigé vers une autre fenêtre pour choisir son vaisseaux
+	
+Déroulement du jeu :
+	- Le jeu débute lorsque l'utilisateur choisi son vaisseau, après appuie sur la touche entré , le jeu est initialisé, le vaisseau du jeu , de l'ennemis ainsi que l'interface de jeu
+	sera affiché
+	Comment le jeu se deroulera t'il??
+		* Mode Facile : 
+			° Le vaisseau du joueur pourra tirer des balles indéfiniment avec une cadence de tir de 10 ms d'attente par tir
+			° Une vague de vaisseau ennemis apparaitra après chaque 30s 
+			° Le nombre de vaisseau par vague est de 28
+			° Seulement 2 vaisseaux de première ligne pourront tirer
+		* Mode Difficile : 
+			° Le vaisseau du joueur pourra tirer des balles indéfiniment avec une cadence de tir de 50 ms d'attente par tir
+			° Une vague de vaisseau ennemis apparaitra après chaque 30s 
+			° Le nombre de vaisseau par vague est de 75
+			° Seulement 5 vaisseaux de première ligne pourront tirer
+		* Mode Progressif : 
+			° Le vaisseau du joueur pourra tirer des balles indéfiniment avec une cadence de tir de + 1 ms toutes les 30s  d'attente par tir (debute avec 20ms d'attente)
+			° Une vague de vaisseau ennemis apparaitra après chaque 50s (avec une redution d'une seconde toutes les 30s)
+			° Le nombre de vaisseau par vague est de 50
+			° probabilité du nombre de vaisseaux blindé +3 %
+			° Seulement 2 vaisseaux de première ligne pourront tirer (+1 toutes les 2 min)
+		* Mode Gladiateur : 
+			° Le joueur ne possede qu'une seule vie
+			° Le jeu prends fin seulement après la mort du joueur.
+			° Le vaisseau du joueur pourra tirer des balles indéfiniment avec une cadence de tir de 30 ms d'attente par tir
+			° Une vague de vaisseau ennemis apparaitra après chaque 30s 
+			° Le nombre de vaisseau par vague est de 50
+			° Seulement 2 vaisseaux de première ligne pourront tirer
+		
+
+
+
+
+
+╔═══╗──────╔╗
+║╔══╝──────║║
+║╚══╦══╦══╦╣║╔══╗
+║╔══╣╔╗║╔═╬╣║║║═╣
+║║──║╔╗║╚═╣║╚╣║═╣
+╚╝──╚╝╚╩══╩╩═╩══╝
+
+
+╔═══╗─╔═╗╔═╗────╔╗
+╚╗╔╗║─║╔╝║╔╝────║║
+─║║║╠╦╝╚╦╝╚╦╦══╦╣║╔══╗
+─║║║╠╬╗╔╩╗╔╬╣╔═╬╣║║║═╣
+╔╝╚╝║║║║─║║║║╚═╣║╚╣║═╣
+╚═══╩╝╚╝─╚╝╚╩══╩╩═╩══╝
+
+╔═══╗────────────────────╔═╗
+║╔═╗║────────────────────║╔╝
+║╚═╝╠═╦══╦══╦═╦══╦══╦══╦╦╝╚╗
+║╔══╣╔╣╔╗║╔╗║╔╣║═╣══╣══╬╬╗╔╝
+║║──║║║╚╝║╚╝║║║║═╬══╠══║║║║
+╚╝──╚╝╚══╩═╗╠╝╚══╩══╩══╩╝╚╝
+─────────╔═╝║
+─────────╚══╝
+
+╔═══╦╗─────╔╗───╔╗
+║╔═╗║║─────║║──╔╝╚╗
+║║─╚╣║╔══╦═╝╠╦═╩╗╔╬══╦╗╔╦═╗
+║║╔═╣║║╔╗║╔╗╠╣╔╗║║║║═╣║║║╔╝
+║╚╩═║╚╣╔╗║╚╝║║╔╗║╚╣║═╣╚╝║║
+╚═══╩═╩╝╚╩══╩╩╝╚╩═╩══╩══╩╝
+
+
+
+
+
+
+░██████╗░░█████╗░███╗░░░███╗███████╗  ░█████╗░██╗░░░██╗███████╗██████╗░
+██╔════╝░██╔══██╗████╗░████║██╔════╝  ██╔══██╗██║░░░██║██╔════╝██╔══██╗
+██║░░██╗░███████║██╔████╔██║█████╗░░  ██║░░██║╚██╗░██╔╝█████╗░░██████╔╝
+██║░░╚██╗██╔══██║██║╚██╔╝██║██╔══╝░░  ██║░░██║░╚████╔╝░██╔══╝░░██╔══██╗
+╚██████╔╝██║░░██║██║░╚═╝░██║███████╗  ╚█████╔╝░░╚██╔╝░░███████╗██║░░██║
+░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝  ░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+
+──────▄▀▄─────▄▀▄
+─────▄█░░▀▀▀▀▀░░█▄
+─▄▄──█░░░░░░░░░░░█──▄▄
+█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
+
+
+sudo apt-get install libsox-fmt-mp3
+
+
+
+
+*************************************************************************
+===========================
+07/11/2021
+=========================
+
+Realese:
+
+Ce qu'il manque:
+	* Gestion du mode progressif
+	* Gestion du mode gladiateur
+	* Gestion du tir pour les ennemis solo
+	* Ajout du son lorsque l'on touche un ennemi
+	* Ajout du son lorsque on est touché par un ennemi
+

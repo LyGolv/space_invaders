@@ -1,0 +1,97 @@
+    |    Press 'q' for quit help !!  |
+    ----------------------------------
+
+Author : 
+	> Guimdo Lioguy
+	> Badarou Malik
+
+          ──────▄▀▄─────▄▀▄
+          ─────▄█░░▀▀▀▀▀░░█▄
+          ─▄▄──█░░░░░░░░░░░█──▄▄
+          █▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
+	==========================
+       |   ~~ SPACE-INVADERS ~~   |
+        ==========================
+
+================================================
+                COMMANDS TO MOVE
+================================================
+
+> Press 'z' key for UP 
+> Press 's' key for Down
+> Press 'q' key for Left
+> Press 'd' key for Right
+
+================================================
+                COMMANDS FOR CONTROL
+================================================
+
+> Press 'h' key for Help
+> Press 'ENTER' key for Validate
+> Press 'p' key for pause the game
+> Press 'l' key for leave the game
+
+================================================
+                PLAYER COMMANDS
+================================================
+
+> Press 'SPACE' key for kill enemys
+
+================================================
+                ENEMYS TYPE
+================================================
+
+╔═🔵═╗  = 25 points | Name: "AKAv1"
+  🔸
+
+╔═🟢═╗  = 50 points | Name: "AKAv2"
+  🔸
+
+╔═🔴═╗  = 75 points | Name: "AKAv3"
+  🔸
+
+╔═⚪═╗  = 100 points | Name: "AKAv4"
+  🔸
+
+╔══════╗
+║ 🔵🔵 ║  = 50 points | Name: "GMAa1"
+╚═🔸🔸═╝
+
+╔══════╗
+║ 🟢🟢 ║  = 100 points | Name: "GMAa2"
+╚═🔸🔸═╝
+
+╔══════╗
+║ 🔴🔴 ║  = 150 points | Name: "GMAa3"
+╚═🔸🔸═╝
+
+╔══════╗
+║ ⚪⚪ ║  = 200 points | Name: "GMAa4"
+╚═🔸🔸═╝
+
+================================================
+                PLAYER VESSEL
+================================================
+
+             ︷
+            /▒▒\
+           ╔╝##╚╗
+          ╔╝▓##▓╚╗
+          ╚-┬--┬-╝
+           🔥 🔥
+           
+        Alpha-Chronos
+       ---------------
+NOTE 
+	New score : to Write a name, please type random letter first.
+	
+REPORTING BUGS
+	@mail of Guimdo Lioguy : vianel.lioguy@gmail.com
+	
+COPYRIGHT
+       Copyright © 2021 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+    ----------------------------------
+    |    Press 'q' for quit help !!  |
+    ----------------------------------
